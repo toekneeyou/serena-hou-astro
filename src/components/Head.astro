@@ -1,0 +1,47 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  img?: string;
+  imgAlt?: string;
+}
+
+const {
+  title = "Serena Hou",
+  description = "UI Designer",
+  img = "",
+  imgAlt = "",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={img} />
+    <meta property="og:image:alt" content={imgAlt} />
+    <meta property="og:url" content="tonyyu.dev" />
+    <meta property="og:type" content="website" />
+    <!-- Twitter Cards Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={img} />
+    <meta name="twitter:image:alt" content={imgAlt} />
+  </head>
+</html>
